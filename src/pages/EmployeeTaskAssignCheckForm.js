@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
-import { getAllTaskAssignAction } from "../redux/TaskAssignReducer";
+import { getAllEmployeeTaskAssignAction } from "../redux/EmployeeTaskAssignReducer";
 
 export const EmployeeTaskAssignCheckForm = () => {
   const formEl = useRef();
@@ -22,7 +22,7 @@ export const EmployeeTaskAssignCheckForm = () => {
 
     if (isFormValid) {
       // dispatch the call to redux ::for API CALL
-      dispatch(getAllTaskAssignAction(empid));
+      dispatch(getAllEmployeeTaskAssignAction(empid));
       history.push("/task-assign");
 
       // clear the form

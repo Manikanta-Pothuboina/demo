@@ -11,7 +11,7 @@ import { AdminTaskTimeExtensionRequestsReducer } from "./AdminTaskTimeExtensionR
 import { EmployeeRequestReducer } from "./EmployeeRequestReducer";
 import { UserReducer } from "./UserReducer";
 import { BenchReducer } from "./BenchReducer";
-import { TaskAssignReducer } from "./TaskAssignReducer";
+import { EmployeeTaskAssignReducer } from "./EmployeeTaskAssignReducer";
 
 const rootReducer = combineReducers({
   admin: AdminReducer,
@@ -21,7 +21,7 @@ const rootReducer = combineReducers({
   adminTaskTimeExtensionRequest: AdminTaskTimeExtensionRequestsReducer,
   employeeRequest: EmployeeRequestReducer,
   bench: BenchReducer,
-  assign: TaskAssignReducer,
+  assign: EmployeeTaskAssignReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));

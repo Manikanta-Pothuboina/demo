@@ -47,7 +47,7 @@ export const AppNav = () => {
           </Nav.Link>
 
           <Nav.Link as={Link} to="/task-assign">
-            Task Assign
+            Employee Task Assign
           </Nav.Link>
 
           <Nav.Link as={Link} to="/employee-list">

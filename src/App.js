@@ -21,8 +21,8 @@ import { EmployeeTimeExtensionRequestAdd } from "./pages/EmployeeTimeExtensionRe
 import { AdminTaskExtensionRequestList } from "./pages/AdminTaskExtensionRequestList";
 import { EmployeeStatusCheckList } from "./pages/EmployeeStatusCheckList";
 import { EmployeeTimeExtensionStatusCheck } from "./pages/EmployeeTimeExtensionStatusCheck";
-import { TaskAssignReducer } from "./redux/TaskAssignReducer";
-import { TaskAssign } from "./pages/TaskAssign";
+import { EmployeeTaskAssignReducer } from "./redux/EmployeeTaskAssignReducer";
+import { EmployeeTaskAssign } from "./pages/EmployeeTaskAssign";
 import { EmployeeTaskAssignCheckForm } from "./pages/EmployeeTaskAssignCheckForm";
 function App() {
   const history = useHistory();
@@ -53,7 +53,7 @@ function App() {
       <Route exact path="/employee-signin" component={EmployeeSignin} />
       <Route exact path="/employee-task-list" component={EmployeeTaskList} />
       <Route exact path="/employee-task-add" component={EmployeeTaskAdd} />
-      <Route exact path="/task-assign" component={TaskAssign} />
+      <Route exact path="/task-assign" component={EmployeeTaskAssign} />
       <Route
         exact
         path="/employee-request-list"

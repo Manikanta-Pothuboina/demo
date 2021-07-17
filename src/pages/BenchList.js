@@ -23,6 +23,7 @@ export const BenchList = () => {
             <th scope="col">bid</th>
             <th scope="col">empStatus</th>
             <th scope="col">empid</th>
+            <th scope="col">Employee Name</th>
           </tr>
         </thead>
         <tbody className="text-light">
@@ -32,6 +33,7 @@ export const BenchList = () => {
               <td>{item.empStatus}</td>
 
               <td>{item.emp.empid}</td>
+              <td>{item.emp.firstname}</td>
             </tr>
           ))}
         </tbody>

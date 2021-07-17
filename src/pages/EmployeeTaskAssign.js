@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllTaskAssignAction } from "../redux/TaskAssignReducer";
+import { getAllEmployeeTaskAssignAction } from "../redux/EmployeeTaskAssignReducer";
 import { AppNav } from "./AppNav";
 
-export const TaskAssign = () => {
+export const EmployeeTaskAssign = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(getAllTaskAssignAction());
+    dispatch(getAllEmployeeTaskAssignAction());
   }, []);
 
   return (
     <div>
       <div className="alert alert-secondary mb-0">
-        <h3>Task Assign</h3>
+        <h3>Employee Task Assign</h3>
       </div>
 
       <table className="table">
@@ -31,7 +31,7 @@ export const TaskAssign = () => {
           </tr>
         </thead>
         <tbody className="text-light">
-          {state.assign.taskAssign.map((item, index) => (
+          {state.assign.employeeTaskAssign.map((item, index) => (
             <tr key={index}>
               {item !== undefined && <td>{item.emp.empid}</td>}
 

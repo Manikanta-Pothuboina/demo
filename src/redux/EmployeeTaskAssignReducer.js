@@ -1,14 +1,14 @@
 import axios from "axios";
 
 const initState = {
-  taskAssign: [],
+  employeeTaskAssign: [],
   progress: false,
 };
 
 const TASK_ASSIGN_GET_ALL_ACTION_TYPE = "TASK_ASSIGN_GET_ALL_ACTION_TYPE";
 
 // ACTIONS
-export const getAllTaskAssignAction = (payload) => {
+export const getAllEmployeeTaskAssignAction = (payload) => {
   return async (dispatch) => {
     // API CALL :: FETCH RECORDS
     const url = `http://localhost:8080/api/v1/work/${payload}`;
@@ -24,10 +24,10 @@ export const getAllTaskAssignAction = (payload) => {
   };
 };
 
-export function TaskAssignReducer(state = initState, action) {
+export function EmployeeTaskAssignReducer(state = initState, action) {
   switch (action.type) {
     case TASK_ASSIGN_GET_ALL_ACTION_TYPE:
-      return { ...state, taskAssign: action.payload };
+      return { ...state, employeeTaskAssign: action.payload };
     default:
       return state;
   }
